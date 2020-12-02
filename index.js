@@ -1,4 +1,4 @@
-vercelconst express = require("express");
+const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
@@ -32,5 +32,5 @@ mongoose.connect(
 //test of git
 // set up routes
 
-app.use("/users", require("./routes/userRouter"));
-app.use("/todos", require("./routes/todoRouter"));
+app.use("/users", require("./userRouter"));
+app.use("/todos", require("./todoRouter"));

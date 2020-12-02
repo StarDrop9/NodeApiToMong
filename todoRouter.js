@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const auth = require("../middleware/auth");
-const Todo = require("../models/todoModel");
+const auth = require("./auth");
+const Todo = require("./todoModel");
 //const Todos = db.todos
 router.post("/todo", auth, async (req, res) => {
   try {
