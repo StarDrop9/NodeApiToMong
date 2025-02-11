@@ -15,19 +15,20 @@ app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 
 // set up mongoose
 
-mongoose.connect(
-  process.env.MONGODB_CONNECTION_STRING,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  },
-  (err) => {
-    if (err) throw err;
-    console.log("MongoDB connection established");
-  }
-);
+mongoose.set("strictQuery", false);
 
+// Update mongoose connection with modern syntax and better error handling
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
+    console.log("MongoDB connection established");
+  } catch (error) {
+    console.error("MongoDB connection error:", error.message);
+    process.exit(1);
+  }
+};
+
+connectDB();
 
 //test of git
 // set up routes

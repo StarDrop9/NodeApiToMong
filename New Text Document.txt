@@ -1,0 +1,4 @@
+Needs to be updated
+
+MONGODB_CONNECTION_STRING=mongodb+srv://kurtstarck:Lance-7531@cluster0.ptzql.mongodb.net/Tasks?retryWrites=true&w=majority
+JWT_SECRET=9zX3zMhY5dJ5bE9zX3zM3kB5qB2qO3cF4aM1qE5dJ5bE9zX3zM
