@@ -1,1 +1,0 @@
-mongodb+srv://kurtstarck:Max-7531$$@cluster0.dykf0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
